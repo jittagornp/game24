@@ -37,11 +37,9 @@ public class App {
 
                 String equation = numb1 + oper1 + numb2 + oper2 + numb3 + oper3 + numb4;
                 Object result = engine.eval(equation);
-                System.out.print(equation);
                 if (result instanceof Integer && (Integer) result == 24) {
-                    System.out.print(" /");
+                    System.out.print(equation);
                 }
-                System.out.println("");
             }
         }
     }
