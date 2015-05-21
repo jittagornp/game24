@@ -6,7 +6,6 @@
 package com.pamarin.game24;
 
 import java.util.List;
-import javax.script.ScriptException;
 
 /**
  *
@@ -14,7 +13,7 @@ import javax.script.ScriptException;
  */
 public class App {
 
-    public static void main(String[] args) throws ScriptException {
+    public static void main(String[] args) {
         String number = "1234";
         System.out.println("Game 24 (" + number + ")");
         System.out.println("----------------------");
