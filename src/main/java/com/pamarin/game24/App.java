@@ -22,7 +22,7 @@ public class App {
         ScriptEngine engine = manager.getEngineByName("js");
         Probability prop = new Probability();
 
-        List<String> uniqueNumbers = prop.findUnique(Arrays.asList("5", "6", "7", "4"));
+        List<String> uniqueNumbers = prop.findUnique(Arrays.asList("5", "6", "2", "4"));
         List<String> operators = prop.findAll(Arrays.asList("+", "-", "*", "/"), 3);
         
         for (String number : uniqueNumbers) {
@@ -38,7 +38,7 @@ public class App {
                 String equation = numb1 + oper1 + numb2 + oper2 + numb3 + oper3 + numb4;
                 Object result = engine.eval(equation);
                 if (result instanceof Integer && (Integer) result == 24) {
-                    System.out.print(equation);
+                    System.out.println(equation);
                 }
             }
         }
