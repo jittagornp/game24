@@ -30,20 +30,20 @@ public class Probability {
         return true;
     }
 
-    private void deep(String top, List<String> elements, int index, Callback callback) {
+    private void walking(String topElement, List<String> elements, int index, Callback callback) {
         if (index < 0) {
-            callback.call(top);
+            callback.call(topElement);
             return;
         }
 
-        for (String e4 : elements) {
-            deep(top + e4, elements, index - 1, callback);
+        for (String element : elements) {
+            walking(topElement + element, elements, index - 1, callback);
         }
     }
 
     public List<String> findAll(final List<String> elements, int size) {
         final List<String> results = new ArrayList<>();
-        deep("", elements, size - 1, new Callback() {
+        walking("", elements, size - 1, new Callback() {
 
             @Override
             public void call(String element) {
