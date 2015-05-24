@@ -14,10 +14,15 @@ import java.util.List;
 public class App {
 
     public static void main(String[] args) {
-        String number = "1234";
-        System.out.println("Game 24 (" + number + ")");
+        String numbers = "1234";
+        System.out.println("Game 24 (" + numbers + ")");
         System.out.println("----------------------");
-        List<String> equations = Game24.getEquations(number);
+
+        List<String> equations = Equations
+                .withAnswer(24)
+                .andNumbers(numbers)
+                .get();
+
         for (int i = 0; i < equations.size(); i++) {
             System.out.println((i + 1) + ". " + equations.get(i));
         }
